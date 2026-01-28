@@ -23,6 +23,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             EventSeeder::class,
             NavigationItemSeeder::class,
+            RolesAndPermissionsSeeder::class,
+            UserSeeder::class
         ]);
     }
 }

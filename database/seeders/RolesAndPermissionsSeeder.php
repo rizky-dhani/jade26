@@ -18,11 +18,5 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // Create Super Admin role
         $superAdminRole = Role::firstOrCreate(['name' => 'Super Admin', 'guard_name' => 'web']);
-
-        // Assign to first user if exists
-        $user = User::first();
-        if ($user) {
-            $user->assignRole($superAdminRole);
-        }
     }
 }
